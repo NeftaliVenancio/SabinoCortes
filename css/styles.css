@@ -31,7 +31,7 @@ body, html {
   width: 50px;
   height: 50px;
   border: 5px solid #e0e0e0;
-  border-top: 5px solid #D9D9D6; /* Cool Gray 1U */
+  border-top: 5px solid #D9D9D6;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -42,10 +42,10 @@ body, html {
 }
 
 .preloader-image {
-  width: 100px; /* Ajusta el tamaño de la imagen */
+  width: 100px;
   height: auto;
   margin-top: 20px;
-  max-width: 80%; /* La imagen se ajustará al tamaño de la pantalla */
+  max-width: 80%;
 }
 
 .preloader-title {
@@ -56,7 +56,6 @@ body, html {
   text-align: center;
 }
 
-
 /* Hero */
 .hero {
   background-image: url('../assets/img/hero.jpg');
@@ -66,7 +65,6 @@ body, html {
   position: relative;
 }
 
-/* Filtro oscuro */
 .hero::before {
   content: "";
   position: absolute;
@@ -74,115 +72,64 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Filtro negro con 40% de opacidad */
-  z-index: 1; /* Asegura que esté por encima de la imagen, pero debajo del contenido */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-/* Contenido del Hero */
 .hero-overlay {
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: white;
-  z-index: 2; /* Asegura que el contenido del hero esté sobre el filtro */
+  z-index: 2;
 }
 
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  transition: opacity 1s ease-in-out;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+}
 
-/* Botón personalizado */
-.btn-custom {
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-btn {
+  font-size: 1.1rem;
+  font-weight: 600;
   background-color: #D9D9D6;
   color: #1F2937;
-  border: none;
-}
-
-.btn-custom:hover {
-  background-color: #c5c5c2;
-  color: #1F2937;
-}
-
-/* Sección Conóceme */
-.section-fullscreen {
-  height: 100vh;
-  padding: 2rem 1rem;
-  position: relative;
-}
-
-#conoceme {
-  background-image: url('../assets/img/fondo.png');
-  background-repeat: repeat;
-  background-size: contain;
-  position: relative;
-}
-
-#conoceme::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.85);
-  z-index: 1;
-}
-
-#conoceme .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Sección Visión */
-.section-fullscreen-vision {
-  height: 100vh;
-  padding: 2rem 1rem;
-  background-image: url('../assets/img/fondo.png');
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.section-fullscreen-vision::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.85);
-  z-index: 1;
-}
-
-.section-fullscreen-vision .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Vision Cards */
-.vision-card {
-  background: #ffffff;
-  padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 90%;
-  min-height: 300px;
+  padding: 12px 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.vision-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
-
-.vision-icon {
-  background: #D9D9D6; /* Cool Gray 1U */
+.hero-btn:hover {
+  background-color: #B0B0A0;
+  transform: translateY(-2px);
   color: #1F2937;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 1.5rem;
 }
 
-/* Sección Galería */
+/* Galería */
 .section-fullscreen-gallery {
   height: 100vh;
   background-image: url('../assets/img/fondo.png');
@@ -191,20 +138,6 @@ body, html {
   background-position: center;
   position: relative;
   padding: 2rem 1rem;
-  overflow: hidden;
-}
-
-.section-fullscreen-gallery::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.85);
-  z-index: 1;
-}
-
-.section-fullscreen-gallery .container {
-  position: relative;
-  z-index: 2;
 }
 
 .gallery-item {
@@ -234,7 +167,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(217, 217, 214, 0.85); /* Cool Gray 1U */
+  background-color: rgba(217, 217, 214, 0.85);
   color: #333333;
   display: flex;
   flex-direction: column;
