@@ -4,50 +4,191 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sabino Cortés</title>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS CDN -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Custom CSS -->
+  <!-- CSS Personalizado -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Hero -->
   <header class="hero d-flex align-items-start">
     <img src="assets/img/sabino_cortes_logo.png" alt="Logo Sabino Cortés" class="position-absolute top-0 start-0 m-4" style="width: 64px;">
     <div class="hero-overlay px-3">
-      <h1 class="display-4 fw-bold" style="font-family: 'Merriweather', serif;">Sabino Cortés</h1>
-      <p class="lead mt-3">Abogado indígena con formación especializada en Derecho Constitucional Penal y amplia experiencia en Derecho de Familia.</p>
-      <a href="#conoceme" class="btn btn-primary mt-4 px-4 py-2">Contacto</a>
+      <h1 class="display-4 fw-bold">Sabino Cortés</h1>
+      <p class="lead mt-3">Abogado indígena especializado en Derecho Constitucional Penal y Derecho Familiar.</p>
+      <a href="#conoceme" class="btn btn-custom mt-4 px-4 py-2">Conóceme</a>
     </div>
   </header>
 
   <!-- Sección Conóceme -->
-  <section id="conoceme" class="section-fullscreen d-flex align-items-center justify-content-center bg-white px-3">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center">
-          <img src="assets/img/conoceme.jpg" alt="Foto Sabino Cortés" class="img-fluid rounded" style="aspect-ratio: 9/16; max-height: 85vh; object-fit: cover;">
+  <section id="conoceme" class="section-fullscreen d-flex align-items-center justify-content-center px-3 position-relative">
+    <div class="container position-relative z-2">
+      <div class="row align-items-center justify-content-center h-100">
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+          <img src="assets/img/conoceme.jpg" alt="Sabino Cortés" class="img-fluid rounded" style="max-height: 70vh; object-fit: cover;">
         </div>
-        <div class="col-md-6 text-center">
-          <h2 class="display-5 fw-bold mb-3" style="font-family: 'Merriweather', serif;">Conóceme</h2>
-          <p class="mb-3 fs-5">Mi nombre es Sabino Cortés, abogado indígena con un firme compromiso por la justicia familiar. A lo largo de mi trayectoria he acompañado a familias en procesos complejos y me he especializado en Derecho Constitucional Penal, con una visión humana y equitativa.</p>
-          <div class="mt-3 d-flex justify-content-center gap-4 fs-4">
-            <a href="https://facebook.com" target="_blank" class="text-decoration-none text-dark"><i class="fab fa-facebook"></i></a>
-            <a href="https://x.com" target="_blank" class="text-decoration-none text-dark"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank" class="text-decoration-none text-dark"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com" target="_blank" class="text-decoration-none text-dark"><i class="fab fa-tiktok"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="text-decoration-none text-dark"><i class="fab fa-linkedin"></i></a>
+        <div class="col-md-5 text-center d-flex flex-column justify-content-center">
+          <h2 class="display-5 fw-bold mb-3">Conóceme</h2>
+          <p class="fs-5 mb-4">
+            Mi nombre es Sabino Cortés, abogado indígena hablante de totonaco, especializado en Derecho Constitucional Penal, con una firme visión humanista para el derecho familiar.
+          </p>
+          <div class="fs-4">
+            <a href="https://www.facebook.com/orozco.cortes.7/" class="text-dark mx-2" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/SabinoCortes70?t=IXtgddSIIDGI-KYEw5tU7A&s=09" class="text-dark mx-2" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/sabino__cortes?igsh=OXQzdmk3eDY0aGZx" class="text-dark mx-2" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@sabino_cortes?_t=ZM-8vjnLaj71xH&_r=1" class="text-dark mx-2" target="_blank"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bootstrap Bundle JS -->
+  <!-- Sección Visión y Propuestas -->
+  <section id="vision" class="section-fullscreen-vision d-flex align-items-center justify-content-center px-3">
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+
+      <div class="vision-content d-flex flex-column align-items-center justify-content-center text-center">
+        <h2 class="display-6 fw-bold mb-5">Nuestra Visión y Compromiso</h2>
+
+        <div class="row justify-content-center align-items-center g-4">
+          <!-- Tarjeta 1 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="vision-card p-4 d-flex flex-column justify-content-center align-items-center">
+              <div class="vision-icon mb-3">
+                <i class="fas fa-scale-balanced"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-center">Función Jurisdiccional</h5>
+              <p class="small text-center">
+                Impartir justicia en Veracruz exige sensibilidad intercultural, enfoque de género y respeto profundo por los derechos humanos en el contexto social de cada persona.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="vision-card p-4 d-flex flex-column justify-content-center align-items-center">
+              <div class="vision-icon mb-3">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-center">Impartición de Justicia</h5>
+              <p class="small text-center">
+                La justicia debe ser ágil, humana y sin formalismos innecesarios, protegiendo especialmente los derechos de la infancia y adolescencia en derecho familiar.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="vision-card p-4 d-flex flex-column justify-content-center align-items-center">
+              <div class="vision-icon mb-3">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-center">Propuestas de Mejora</h5>
+              <ul class="list-unstyled small text-start" style="max-width: 250px;">
+                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #D9D9D6;"></i> Integridad y derechos humanos.</li>
+                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #D9D9D6;"></i> Innovación tecnológica judicial.</li>
+                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #D9D9D6;"></i> Sentencias claras y realistas.</li>
+                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #D9D9D6;"></i> Protección familiar proactiva.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección Galería -->
+  <section id="galeria" class="section-fullscreen-gallery d-flex align-items-center justify-content-center px-3 position-relative">
+    <div class="container d-flex flex-column justify-content-center h-100 position-relative" style="z-index: 2;">
+
+      <div class="row g-4 justify-content-center align-items-center flex-wrap" style="flex: 1;">
+        <!-- Imagen 1 -->
+        <div class="col-6 col-md-4 d-flex justify-content-center">
+          <div class="gallery-item">
+            <img src="assets/img/galeria/galeria1.jpg" class="gallery-img" alt="Imagen 1">
+            <div class="overlay">
+              <h5 class="fw-bold">Título 1</h5>
+              <p class="small">Descripción breve de la imagen 1.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 2 -->
+        <div class="col-6 col-md-4 d-flex justify-content-center">
+          <div class="gallery-item">
+            <img src="assets/img/galeria/galeria2.jpg" class="gallery-img" alt="Imagen 2">
+            <div class="overlay">
+              <h5 class="fw-bold">Título 2</h5>
+              <p class="small">Descripción breve de la imagen 2.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 3 -->
+        <div class="col-6 col-md-4 d-flex justify-content-center">
+          <div class="gallery-item">
+            <img src="assets/img/galeria/galeria3.jpg" class="gallery-img" alt="Imagen 3">
+            <div class="overlay">
+              <h5 class="fw-bold">Título 3</h5>
+              <p class="small">Descripción breve de la imagen 3.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 4 -->
+        <div class="col-6 col-md-4 d-flex justify-content-center">
+          <div class="gallery-item">
+            <img src="assets/img/galeria/galeria4.jpg" class="gallery-img" alt="Imagen 4">
+            <div class="overlay">
+              <h5 class="fw-bold">Título 4</h5>
+              <p class="small">Descripción breve de la imagen 4.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 5 -->
+        <div class="col-6 col-md-4 d-flex justify-content-center">
+          <div class="gallery-item">
+            <img src="assets/img/galeria/galeria5.jpg" class="gallery-img" alt="Imagen 5">
+            <div class="overlay">
+              <h5 class="fw-bold">Título 5</h5>
+              <p class="small">Descripción breve de la imagen 5.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 6 -->
+        <div class="col-6 col-md-4 d-flex justify-content-center">
+          <div class="gallery-item">
+            <img src="assets/img/galeria/galeria6.jpg" class="gallery-img" alt="Imagen 6">
+            <div class="overlay">
+              <h5 class="fw-bold">Título 6</h5>
+              <p class="small">Descripción breve de la imagen 6.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
-  <script src="js/main.js"></script>
+  <!-- Script personalizado -->
+  <script src="js/script.js"></script>
 </body>
 </html>
