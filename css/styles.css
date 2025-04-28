@@ -17,7 +17,9 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  text-align: center;
 }
 
 #preloader.fade-out {
@@ -29,7 +31,7 @@ body, html {
   width: 50px;
   height: 50px;
   border: 5px solid #e0e0e0;
-  border-top: 5px solid #D9D9D6; /* Color cambiado */
+  border-top: 5px solid #D9D9D6; /* Cool Gray 1U */
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -38,6 +40,22 @@ body, html {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
 }
+
+.preloader-image {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-top: 20px;
+  max-width: 80%; /* La imagen se ajustará al tamaño de la pantalla */
+}
+
+.preloader-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #1F2937;
+  text-align: center;
+}
+
 
 /* Hero */
 .hero {
@@ -100,12 +118,25 @@ body, html {
 .section-fullscreen-vision {
   height: 100vh;
   padding: 2rem 1rem;
-  background-color: #f9f9f9;
+  background-image: url('../assets/img/fondo.png');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.vision-content {
-  width: 100%;
-  max-width: 1200px;
+.section-fullscreen-vision::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
+
+.section-fullscreen-vision .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* Vision Cards */
@@ -125,7 +156,7 @@ body, html {
 }
 
 .vision-icon {
-  background: #D9D9D6; /* Nuevo color */
+  background: #D9D9D6; /* Cool Gray 1U */
   color: #1F2937;
   width: 60px;
   height: 60px;
