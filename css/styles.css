@@ -110,7 +110,7 @@ body, html {
 /* Estilo para el Subtítulo */
 .hero-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 1.7rem;  /* Ajustado a 1.7rem */
+  font-size: 1.5rem;  /* Ajustado a 1.7rem */
   font-weight: 400;
   line-height: 1.5;
   margin-top: 20px;
@@ -228,74 +228,45 @@ body, html {
   font-size: 1.5rem;
 }
 
-/* Sección Galería */
-.section-fullscreen-gallery {
-  height: 100vh;
-  background-image: url('../assets/img/fondo.png');
+/* Sección Galería con fondo y filtro */
+.section-fullscreen-galeria {
+  background-image: url('../assets/img/fondo.png'); /* Fondo de imagen */
   background-repeat: repeat;
   background-size: contain;
   background-position: center;
   position: relative;
-  padding: 2rem 1rem;
-  overflow: hidden;
+  padding: 0; /* Elimina el padding para que ocupe toda la pantalla */
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
 }
 
-.section-fullscreen-gallery::before {
+/* Filtro para la sección de galería */
+.section-fullscreen-galeria::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.85); /* Filtro Cool Gray 1U */
   z-index: 1;
 }
 
-.section-fullscreen-gallery .container {
+/* Contenido dentro de la sección */
+.section-fullscreen-galeria .container {
   position: relative;
   z-index: 2;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 320px;
-  aspect-ratio: 1 / 1;
-  border-radius: 0.5rem;
-}
-
-.gallery-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  border-radius: 0.5rem;
-}
-
-.gallery-item:hover .gallery-img {
-  transform: scale(1.05);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(217, 217, 214, 0.85); /* Cool Gray 1U */
-  color: #333333;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  text-align: center;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  align-items: center; /* Centra el contenido del widget */
+  height: 100%; /* Asegura que el contenido esté centrado verticalmente */
 }
 
-.gallery-item:hover .overlay {
-  opacity: 1;
+/* Ajuste del widget de Instagram */
+.elfsight-app-12a6c03c-873d-4d7b-b417-c20565f99554 {
+  max-width: 100%;
+  margin: 0 auto; /* Centra el widget */
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Sección de Contacto */
 .section-fullscreen-contacto {
