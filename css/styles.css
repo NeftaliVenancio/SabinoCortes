@@ -296,3 +296,132 @@ body, html {
 .gallery-item:hover .overlay {
   opacity: 1;
 }
+
+/* Sección de Contacto */
+.section-fullscreen-contacto {
+  background-image: url('../assets/img/fondo.png');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  padding: 5rem 1rem; /* Ajuste del espaciado superior */
+  height: 80vh; /* Ajusta la altura de la sección a 80% de la pantalla */
+}
+
+.section-fullscreen-contacto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
+
+.section-fullscreen-contacto .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Contenedor para la sección de contacto en dos columnas */
+.row {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Igualar las alturas de las tarjetas */
+}
+
+/* Formulario de Contacto */
+.contact-form .form-control {
+  border-radius: 0.5rem;
+}
+
+.contact-form .btn-custom {
+  background-color: #D9D9D6;
+  color: #1F2937;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form .btn-custom:hover {
+  background-color: #B0B0A0;
+  transform: translateY(-2px);
+}
+
+/* Columna derecha con redes sociales y contacto */
+.contact-card {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Asegura que las tarjetas tengan la misma altura */
+  text-align: center; /* Centra todo el contenido dentro de la tarjeta */
+}
+
+/* Separar el título de redes sociales y contacto */
+.contact-card h5 {
+  font-size: 1.8rem;
+  color: #1F2937;
+  font-weight: 600;
+  margin-bottom: 1.5rem; /* Aumento del espacio debajo del título */
+}
+
+/* Espaciado entre redes sociales y los demás textos */
+.social-links {
+  margin-bottom: 1.5rem; /* Asegura que haya suficiente espacio entre los iconos y los textos */
+}
+
+.social-links a {
+  font-size: 1.8rem;
+  color: #1F2937;
+  margin: 10px;
+}
+
+.social-links a:hover {
+  color: #0d6efd;
+}
+
+/* Estilos para los textos de contacto */
+.contact-card p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 10px 0;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #B0B0A0; /* Gris Pantone */
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .social-links a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #ffffff;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
