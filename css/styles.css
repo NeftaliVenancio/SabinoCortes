@@ -41,6 +41,24 @@ body, html {
   100% { transform: rotate(360deg);}
 }
 
+/* Imagen pequeña entre el título y el texto */
+.preloader-image {
+  width: 50px; /* Tamaño reducido */
+  height: auto;
+  margin-top: 20px;
+  max-width: 40%; /* La imagen se ajustará proporcionalmente */
+}
+
+/* Título del preloader */
+.preloader-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #1F2937;
+  text-align: center;
+}
+
+
 /* Hero */
 .hero {
   background-image: url('../assets/img/hero.jpg');
