@@ -228,43 +228,52 @@ body, html {
   font-size: 1.5rem;
 }
 
-/* Sección Galería con fondo y filtro */
-.section-fullscreen-galeria {
-  background-image: url('../assets/img/fondo.png'); /* Fondo de imagen */
-  background-repeat: repeat;
+
+.gallery-section {
+  height: 100vh;
+  background: url('../assets/img/fondo.png') repeat center center;
   background-size: contain;
-  background-position: center;
   position: relative;
-  padding: 0; /* Elimina el padding para que ocupe toda la pantalla */
-  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  padding: 4vh 5vw; /* Margen proporcional a la pantalla */
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* Filtro para la sección de galería */
-.section-fullscreen-galeria::before {
-  content: "";
+.gallery-overlay {
   position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.85); /* Filtro Cool Gray 1U */
-  z-index: 1;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 0;
 }
 
-/* Contenido dentro de la sección */
-.section-fullscreen-galeria .container {
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2vh 2vw; /* Separación proporcional entre imágenes */
+  height: 100%;
+  width: 100%;
   position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Centra el contenido del widget */
-  height: 100%; /* Asegura que el contenido esté centrado verticalmente */
+  z-index: 1;
+  align-items: center;
+  justify-items: center;
 }
 
-/* Ajuste del widget de Instagram */
-.elfsight-app-12a6c03c-873d-4d7b-b417-c20565f99554 {
-  max-width: 100%;
-  margin: 0 auto; /* Centra el widget */
-  border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 100%;
+  transition: transform 0.3s ease;
 }
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+
 
 
 
@@ -300,7 +309,7 @@ body, html {
 }
 
 .contact-card {
-  background-color: #ffffff;
+  background-color: rgba(176, 176, 160, 0.5);
   border-radius: 1rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -310,10 +319,16 @@ body, html {
   height: 100%; /* Igualar las alturas de las tarjetas */
 }
 
+.contact-card:hover {
+  background-color: rgba(176, 176, 160, 0.9);
+
+}
+
 /* Formulario de Contacto */
 .contact-form .form-control {
   border-radius: 0.5rem;
 }
+
 
 .contact-form .btn-custom {
   background-color: #D9D9D6;
@@ -330,7 +345,7 @@ body, html {
 }
 /* Estilo del botón personalizado */
 .btn-custom {
-  background-color: #D9D9D6; /* Fondo gris claro */
+  background-color: #FFFFFF; /* Fondo gris claro */
   color: #1F2937; /* Texto oscuro */
   padding: 12px 30px;
   font-weight: 600;
@@ -346,15 +361,17 @@ body, html {
 
 /* Columna derecha con redes sociales y contacto */
 .contact-card {
-  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  background-color: rgba(176, 176, 160, 0.5); /* Fondo blanco para las tarjetas */
   border-radius: 1rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: cen;
   height: 100%; /* Asegura que las tarjetas tengan la misma altura */
   text-align: center; /* Centra todo el contenido dentro de la tarjeta */
+
+
 }
 
 /* Separar el título de redes sociales y contacto */
