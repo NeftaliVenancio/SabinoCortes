@@ -76,7 +76,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Filtro negro con 50% de opacidad */
+  background-color: rgba(0, 0, 0, 0.7); /* Filtro negro con 50% de opacidad */
   z-index: 1;
 }
 
@@ -147,6 +147,44 @@ body, html {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+
+.hero-106-box {
+  z-index: 1030; /* Mantener siempre visible */
+}
+
+.hero-106-box .hero-box-number {
+  background-color: rgba(176, 176, 160, 0.85); /* Gris con transparencia */
+  width: 70px;
+  height: 70px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-106-box .hero-vota-text {
+  width: 70px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 1px;
+  background: none; /* sin fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 4px 20px rgba(0, 0, 0, 1);
+}
+
+.hero-frase {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+
 
 /* Sección Conóceme */
 .section-fullscreen {
